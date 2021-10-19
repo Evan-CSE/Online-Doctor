@@ -53,6 +53,7 @@ export default function Login() {
                 const credential = GoogleAuthProvider.credentialFromError(error);
                 // ...
             });
+            
     }
     const SETEmail = (e)=>{
         setEmail(e.target.value);

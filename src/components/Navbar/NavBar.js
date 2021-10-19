@@ -6,7 +6,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 
 export default function NavBar() {
-    const [user,setUser] = useContext(MyContext);
+    const [user, setUser] = useContext(MyContext);
     const style = {
         textDecoration: 'none',
         color: 'white',
@@ -21,6 +21,7 @@ export default function NavBar() {
         }).catch((error) => {
         });
     }
+    console.log(user);
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -33,15 +34,17 @@ export default function NavBar() {
                         <NavLink to='/contact' style={style}>Contact Us</NavLink>
                         <NavLink to='/about' style={style}>About Us</NavLink>
                         {
-                            user.email ? 
+                            user?.email ?
                                 <>
                                     <button onClick={LogOut}>
                                         Log Out
                                     </button>
-                                    Name: {user.name}
+                                    <span className="text-white">
+                                        Name: {user.displayName}
+                                    </span>
                                 </> :
                                 <><NavLink to='/login' style={style}>Login</NavLink>
-                                <NavLink to='/register' style={style}>Registration</NavLink></> 
+                                    <NavLink to='/register' style={style}>Registration</NavLink></>
                         }
                     </Nav>
                 </Navbar.Collapse>
