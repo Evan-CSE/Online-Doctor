@@ -1,24 +1,35 @@
 import Button from '@restart/ui/esm/Button'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useHistory } from 'react'
 import { Form } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { MyContext } from '../../App'
-import EmailRegister from '../../FirebaseAuth/EmailRegister/EmailRegister'
 import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar'
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export default function Register() {
-    const [user] = useContext(MyContext);
+    const [user, setUser] = useContext(MyContext);
+    console.log(user);
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const handleForm = (e) => {
         e.preventDefault();
         console.log(email, pass);
-        if(pass.length<6){
+        if (pass.length < 6) {
             alert('Password must be 6 characters long');
             return;
         }
-        EmailRegister(email, pass);
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, pass)
+            .then((userCredential) => {
+                console.log(userCredential.user);
+                setUser(userCredential.user)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
+
     }
     const GetEmail = (e) => {
         setEmail(e.target.value);

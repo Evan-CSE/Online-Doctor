@@ -15,40 +15,47 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import React, { useState } from "react";
 import GoogleSignIn from "./FirebaseAuth/GoogleSignIn/GoogleSignIn";
+import Consult from "./components/Consult/Consult";
 
 
 FirebaseInit();
 export const MyContext = React.createContext({});
 
 function App() {
-  const [user,setUser] = useState({})
+  const [user, setUser] = useState({})
   return (
-    <MyContext.Provider value={[user,setUser]}>
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Header></Header>
-        </Route>
-        <Route exact path='/home'>
-          <Header></Header>
-        </Route>
-        <Route exact path='/about'>
-          <About></About>
-        </Route>
-        <Route exact path='/contact'>
-          <Contact></Contact>
-        </Route>
-        <Route exact path="/login">
-          <Login></Login>
-        </Route>
-        <Route exact path="/register">
-          <Register></Register>
-        </Route>
-        <Route>
-          <ErrorPage></ErrorPage>
-        </Route>
-      </Switch>
-    </Router>
+    <MyContext.Provider value={[user, setUser]}>
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Header></Header>
+          </Route>
+          <Route exact path='/home'>
+            <Header></Header>
+          </Route>
+          <Route exact path='/about'>
+            <About></About>
+          </Route>
+          <Route exact path='/contact'>
+            <Contact></Contact>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/register">
+            <Register></Register>
+          </Route>
+          <Route exact path="/consult">
+            {
+              user?.email?
+              <Consult></Consult>:<Login></Login>
+            }
+          </Route>
+          <Route>
+            <ErrorPage></ErrorPage>
+          </Route>
+        </Switch>
+      </Router>
     </MyContext.Provider>
   );
 }
