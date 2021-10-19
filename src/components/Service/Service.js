@@ -20,8 +20,8 @@ export default function Service(props) {
             <h3>
                 Doctors Currently Online: <span className="text-success">{obj.currentlyOnline}</span>
             </h3>
-            <button className="d-block mx-auto my-3 border-3 rounded bg-warning border-warning ">
-                <NavLink to='/consult'>
+            <button className="d-block mx-auto my-3 border-3 rounded bg-warning border-warning text-white">
+                <NavLink to='/consult' style={{color:'black',textDecoration:'none'}}>
                     Consult Doctor
                 </NavLink>
 

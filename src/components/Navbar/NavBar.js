@@ -40,9 +40,9 @@ export default function NavBar() {
                                     <button onClick={LogOut}>
                                         Log Out
                                     </button>
-                                    <span className="text-white">
-                                        Name: {user.displayName}
-                                    </span>
+                                    <h3 className="text-white ms-5">
+                                    <i class="fas fa-user"></i> {user.displayName}
+                                    </h3>
                                 </> :
                                 <><NavLink to='/login' style={style}>Login</NavLink>
                                     <NavLink to='/register' style={style}>Registration</NavLink></>
