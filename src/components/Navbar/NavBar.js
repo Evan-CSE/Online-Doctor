@@ -21,6 +21,7 @@ export default function NavBar() {
                         <NavLink to='/contact' style={style}>Contact Us</NavLink>
                         <NavLink to='/about' style={style}>About Us</NavLink>
                         <NavLink to='/login' style={style}>Login</NavLink>
+                        <NavLink to='/register' style={style}>Registration</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

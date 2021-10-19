@@ -23,7 +23,7 @@ export default function Footer() {
                 </h5>
                 <h5 className="text-white">
                     <i class="fas fa-business-time text-info"></i>
-                    Open Hourse: Mn - St: 8:00am - 9:00pm Sn: Closed
+                    Open Hours: Mn - St: 8:00am - 9:00pm Sn: Closed
                 </h5>
             </div>
             <div className="col-md-6 my-auto">

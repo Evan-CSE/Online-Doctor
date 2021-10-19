@@ -1,0 +1,35 @@
+[debug] [2021-10-19T11:51:54.078Z] ----------------------------------------------------------------------
+[debug] [2021-10-19T11:51:54.080Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-10-19T11:51:54.080Z] CLI Version:   9.20.0
+[debug] [2021-10-19T11:51:54.081Z] Platform:      linux
+[debug] [2021-10-19T11:51:54.081Z] Node Version:  v12.22.5
+[debug] [2021-10-19T11:51:54.081Z] Time:          Tue Oct 19 2021 07:51:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2021-10-19T11:51:54.081Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-19T11:51:54.134Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-19T11:51:54.134Z] > authorizing via signed-in user (evanshareef@gmail.com)
+[debug] [2021-10-19T11:51:54.135Z] [iam] checking project doctorschamber-a5a93 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-10-19T11:51:54.137Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-19T11:51:54.137Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T11:51:54.471Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 19 Oct 2021 11:51:54 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T11:51:54.499Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/doctorschamber-a5a93:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-10-19T11:51:55.120Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 19 Oct 2021 11:51:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=225","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T11:51:55.128Z] > refreshing access token with scopes: []
+[debug] [2021-10-19T11:51:55.129Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T11:51:55.390Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Tue, 19 Oct 2021 11:51:55 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T11:51:55.421Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doctorschamber-a5a93 [none]
+[debug] [2021-10-19T11:51:56.374Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doctorschamber-a5a93 200
+[debug] [2021-10-19T11:51:56.376Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doctorschamber-a5a93 {"projectId":"doctorschamber-a5a93","projectNumber":"196081774439","displayName":"DoctorsChamber","name":"projects/doctorschamber-a5a93","resources":{"hostingSite":"doctorschamber-a5a93"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'doctorschamber-a5a93'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-10-19T11:51:56.395Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-19T11:51:56.396Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-19T11:51:56.625Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Tue, 19 Oct 2021 11:51:56 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-19T11:51:56.647Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/doctorschamber-a5a93/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
