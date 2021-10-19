@@ -12,9 +12,13 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const handleForm = (e) => {
-        console.log(email, pass);
-        EmailRegister(email, pass);
         e.preventDefault();
+        console.log(email, pass);
+        if(pass.length<6){
+            alert('Password must be 6 characters long');
+            return;
+        }
+        EmailRegister(email, pass);
     }
     const GetEmail = (e) => {
         setEmail(e.target.value);
