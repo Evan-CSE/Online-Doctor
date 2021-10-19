@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer'
 import NavBar from '../Navbar/NavBar'
 
 export default function Contact() {
@@ -11,6 +12,7 @@ export default function Contact() {
             <p className='ms-3'>
                 Last Covid-19 situation was a challenge for whole globe. Helath check up was difficult to. Consulting to a doctor was difficult too. So online doctor came to solve the situation
             </p>
+            <Footer></Footer>
         </div>
     )
 }

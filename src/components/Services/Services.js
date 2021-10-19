@@ -7,6 +7,7 @@ export default function Services() {
         textAlign: 'center',
         marginTop: '4px'
     }
+    
     const container = {
         display: 'grid',
         gridTemplateColumns: 'repeat(3,1fr)',
