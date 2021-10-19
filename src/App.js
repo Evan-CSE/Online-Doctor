@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import About from "./components/About/About";
 import FirebaseInit from "./FirebaseAuth/FirebaseInit";
 import Contact from "./components/Contact/Contact";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 
 FirebaseInit();
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route exact path='/contact'>
           <Contact></Contact>
+        </Route>
+        <Route>
+          <ErrorPage></ErrorPage>
         </Route>
       </Switch>
     </Router>
