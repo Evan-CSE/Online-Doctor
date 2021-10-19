@@ -21,9 +21,8 @@ FirebaseInit();
 export const MyContext = React.createContext({});
 
 function App() {
-  const user = GoogleSignIn();
   return (
-    <MyContext.Provider value={user}><Router>
+    <Router>
       <Switch>
         <Route exact path='/'>
           <Header></Header>
@@ -48,7 +47,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    </MyContext.Provider>
   );
 }
 
