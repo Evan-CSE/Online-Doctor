@@ -17,13 +17,14 @@ import React, { useState } from "react";
 import GoogleSignIn from "./FirebaseAuth/GoogleSignIn/GoogleSignIn";
 import Consult from "./components/Consult/Consult";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import SERVICESPage from "./components/SERVICESPage/SERVICESPage";
 
 FirebaseInit();
 export const MyContext = React.createContext({});
 
 function App() {
   const auth = getAuth();
-  const [user, setUser] = useState(auth.currentUser)
+  const [user, setUser] = useState({});
   return (
     <MyContext.Provider value={[user, setUser]}>
       <Router>
@@ -51,6 +52,9 @@ function App() {
               user?.email ?
                 <Consult></Consult> : <Login></Login>
             }
+          </Route>
+          <Route exact path='/services'>
+            <SERVICESPage></SERVICESPage>
           </Route>
           <Route>
             <ErrorPage></ErrorPage>

@@ -17,6 +17,7 @@ export default function NavBar() {
         const auth = getAuth();
         signOut(auth).then(() => {
             setUser({});
+            
             alert("Log Out Successful");
         }).catch((error) => {
         });
