@@ -7,7 +7,10 @@ import {
 import './App.css';
 import Header from "./components/Header/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Contact from "./components/Contact/Contact";
+import About from "./components/About/About";
+import FirebaseInit from "./FirebaseAuth/FirebaseInit";
+
+FirebaseInit();
 
 function App() {
   return (
@@ -19,8 +22,8 @@ function App() {
         <Route exact path='/home'>
           <Header></Header>
         </Route>
-        <Route exact path='/contact'>
-          <Contact></Contact>
+        <Route exact path='/about'>
+          <About></About>
         </Route>
       </Switch>
     </Router>
