@@ -13,7 +13,7 @@ import Contact from "./components/Contact/Contact";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import React from "react";
+import React, { useState } from "react";
 import GoogleSignIn from "./FirebaseAuth/GoogleSignIn/GoogleSignIn";
 
 
@@ -21,7 +21,9 @@ FirebaseInit();
 export const MyContext = React.createContext({});
 
 function App() {
+  const [user,setUser] = useState({})
   return (
+    <MyContext.Provider value={[user,setUser]}>
     <Router>
       <Switch>
         <Route exact path='/'>
@@ -47,6 +49,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </MyContext.Provider>
   );
 }
 
