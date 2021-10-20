@@ -29,6 +29,9 @@ export default function Footer() {
             <div className="col-md-6 my-auto">
                     <iframe width="100%" height="90%" id="gmap_canvas" src="https://maps.google.com/maps?q=dhanmondi%2032,%20dhaka,%20bangladesh&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
+            <h5 className="text-center">
+                @copyright evanshareef@gmail.com
+            </h5>
         </div>
     )
 }
