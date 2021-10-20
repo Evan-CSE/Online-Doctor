@@ -15,7 +15,7 @@ export default function Contact() {
             <div className="mt-4 d-flex align-items-center justify-content-around">
                 <div>
                     <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5EBJy2-BKwI-20iKK8iSESIyMpA-H4rgBPw&usqp=CAU" alt="" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5EBJy2-BKwI-20iKK8iSESIyMpA-H4rgBPw&usqp=CAU" width="100%" height="300px" alt="" />
                     </div>
                 </div>
                 <div>
